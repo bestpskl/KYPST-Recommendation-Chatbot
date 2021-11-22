@@ -28,6 +28,7 @@
             User API->>Database: updateStatus(data)
         end
 ```
+<img src="imgreadme/sequence-1.png">
 
 # Use Case 2 : send message
 ```mermaid
@@ -93,6 +94,8 @@
             Line->>User: reply sticker
         end
 ```
+<img src="imgreadme/sequence-2.png">
+
 # Use Case 3 : block-user
 ```mermaid
     sequenceDiagram
@@ -106,3 +109,4 @@
         Controller->>User API: blocked(user_id)
         User API->>Database: blocked(user_id, status)
 ```
+<img src="imgreadme/sequence-3.png">
