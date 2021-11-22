@@ -4,7 +4,7 @@
 
 <img src="imgreadme/kypst-line-page.jpg" width="45%">
 
-**KYPST Investment Recommendation Chatbot** เป็น Chatbot ที่พัฒนาขึ้นเพื่อศึกษาการพัฒนา Chatbot บน Line Application ร่วมกับ DialogFlow,  ผลิตภัณฑ์บน Google Cloud Platform และภาษา Python โดยมีวัตถุประสงค์เพื่อให้ผู้ที่เข้ามาใช้ Chatbot (User)สามารถประเมินความเสี่ยงของตนเองว่าตัวเองเหมาะกับการลงทุนแบบไหน (ทั้งนี้การลงทุนมีความเสี่ยงผู้ลงทุนควรศึกษาข้อมูลก่อนตัดสินใจลงทุน Chatbot นี้เป็นแค่เครื่องมือในการประกอบการตัดสินใจเท่านั้น)
+**KYPST Investment Recommendation Chatbot** เป็น Chatbot ที่พัฒนาขึ้นเพื่อศึกษาการพัฒนา Chatbot บน Line Application ร่วมกับ DialogFlow,  ผลิตภัณฑ์บน Google Cloud Platform และภาษา Python โดยมีวัตถุประสงค์เพื่อให้ผู้ที่เข้ามาใช้ Chatbot สามารถประเมินความเสี่ยงของตนเองว่าตัวเองเหมาะกับการลงทุนแบบไหน (ทั้งนี้การลงทุนมีความเสี่ยงผู้ลงทุนควรศึกษาข้อมูลก่อนตัดสินใจลงทุน Chatbot นี้เป็นแค่เครื่องมือในการประกอบการตัดสินใจเท่านั้น)
 
 Project นี้เป็นส่วนหนึ่งของวิชา Software Engineering (รหัสวิชา 2603483)
 
