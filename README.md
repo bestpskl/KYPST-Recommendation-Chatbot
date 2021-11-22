@@ -20,6 +20,8 @@ Project นี้เป็นส่วนหนึ่งของวิชา So
 
 <img src="imgreadme/kypst-qrcode.png" width="25%">
 
+เนื่องด้วยระบบ google cloud platform มีค่าใช้จ่ายในการดำเนินการ ดังนั้นถ้าต้องการทดสอบ chatbot ให้ติดต่อ developer เข้ามาก่อนเพื่อเปิดระบบให้ chatbot สามารถใช้งานได้
+
 ## คู่มือในการใช้งาน Chatbot
 
 เมื่อผู้ใช้งาน (User) ทำการ add friend ตัว chatbot แล้ว ตัว Chatbot จะทักทาย User กลับ จากนั้น User จะสามารถเลือกใช้งานฟังก์ชันบนแถบ rich menu ได้ซึ่งมีด้วยกัน 3 ฟังก์ชัน ได้แก่ 
