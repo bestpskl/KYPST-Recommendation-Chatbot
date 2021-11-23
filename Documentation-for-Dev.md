@@ -14,8 +14,9 @@
 
 ## ส่วนประกอบของ software
 1. Controller: เป็นส่วนที่ช่วยเป็น Orchestrator ระหว่างการ interaction ของ user จาก Line และ DialogFlow
+
         Api_requester : ใช้สำหรับการ request api จาก Line และ DialogFlow โดยภายในประกอบด้วย 
-            class requester ที่มี def ต่าง ๆ ดังต่อไปนี้
+            class requester ที่มี def ต่าง ๆ ดังต่อไปนี้	    
                 def post_dialogflow ใช้สำหรับการส่ง request ไปยัง DialogFlow โดยผ่าน url webhook
                 def post_user ใช้สำหรับการส่ง request ไปยัง chat ของ user ผ่านทาง api user
                 def get_user ใช้สำหรับการรับ userId ของ user
@@ -28,26 +29,28 @@
                 def get_profile ใช้สำหรับการเก็บ user id
         หมายเหตุ: จะต้องมีการระบุ content type และ authorization ซึ่งจะต้องระบุไว้ใน def _init_ ของ class LineRespond
 
-        System : ใช้สำหรับการการระบุ path ของไฟล์ Json ที่จะส่งผ่านกันในแต่ละส่วนของโปรแกรม โดยภายในประกอบด้วย
+        system : ใช้สำหรับการการระบุ path ของไฟล์ Json ที่จะส่งผ่านกันในแต่ละส่วนของโปรแกรม โดยภายในประกอบด้วย
             class configurator ที่มี def ต่าง ๆ ดังต่อไปนี้
                 def get ใช้สำหรับการส่งค่า path ที่ต้องการ
                 
         main : เป็นส่วนหลักสำหรับการ run function หลักของ controller โดยประกอบด้วยส่วนต่าง ๆ ดังต่อไปนี้
                 def handle_message ใช้สำหรับ 3 ส่วนคือ การเก็บข้อมูลของ user เข้าสู่ database เมื่อ user ทำการเพิ่มเพื่อนกับตัวของแชทบอท และ ใช้สำหรับตอบกลับ user ในกรณีที่ user ต้องการทำแบบสอบถามรวมถึงการคำนวนความเหมาะสมของ user กับประเภทของการลงทุน และ การตอบกลับ user ด้วยสติ๊กเกอร์
                 def sendAssessment ใช้สำหรับส่งแบบสอบถามให้กับ user
+		
         มี list ของตัวแปรคำถามที่ใช้สำหรับถามuserและคำตอบสำหรับประเภทการลงทุนที่เหมาะสมกับ user คนนั้น ๆ อยู่ภายในส่วนนี้
 
 2. user : เป็นส่วนที่ใช้ในเก็บข้อมูล user สู่ database
+
         Db: เป็นคำสั่งต่างๆสำหรับการ interact กับ database โดยภายในจะประกอบด้วย
-            Class Cloudsql ที่มี def ต่าง ๆ ดังต่อไปนี้
+            class Cloudsql ที่มี def ต่าง ๆ ดังต่อไปนี้    
                 def __connect ใช้สำหรับเชื่อมต่อกับ database
                 def __close_connection ใช้สำหรับตัดการเชื่อมต่อกับ database
                 def query ใช้สำหรับการ run query 
                 def query_df ใช้สำหรับการ run query และได้ค่า dataframe 
         หมายเหตุ: จะต้องมีการ config การตั้งค่าต่างๆในการเชื่อมกับ database โดยการระบุไว้ใน def __init__ ภายใน class CloudSql
 
-        System : ใช้สำหรับการการระบุ path ของไฟล์ Json ที่จะส่งผ่านกันในแต่ละส่วนของโปรแกรม โดยภายในประกอบด้วย
-            class configurator ที่มี def ต่าง ๆ ดังต่อไปนี้
+        system : ใช้สำหรับการการระบุ path ของไฟล์ Json ที่จะส่งผ่านกันในแต่ละส่วนของโปรแกรม โดยภายในประกอบด้วย
+            class Configurator ที่มี def ต่าง ๆ ดังต่อไปนี้
                 def get ใช้สำหรับการส่งค่า path ที่ต้องการ
 
         user: ใช้สำหรับการสร้าง query เพื่อที่จะ เพิ่ม ลด update user ประกอบด้วย
