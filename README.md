@@ -1,75 +1,44 @@
-
-
 # KYPST Investment Recommendation Chatbot
 
 <img src="imgreadme/kypst-line-page.jpg" width="45%">
 
-**KYPST Investment Recommendation Chatbot** เป็น Chatbot ที่พัฒนาขึ้นเพื่อศึกษาการพัฒนา Chatbot บน Line Application ร่วมกับ DialogFlow, Google Cloud Function, SQL และภาษา Python โดยมีวัตถุประสงค์เพื่อให้ผู้ที่เข้ามาใช้ Chatbot สามารถประเมินความเสี่ยงของตนเองได้ว่าตัวเองเหมาะกับการลงทุนประเภทไหน (ทั้งนี้การลงทุนมีความเสี่ยงผู้ลงทุนควรศึกษาข้อมูลก่อนตัดสินใจลงทุน Chatbot นี้เป็นแค่เครื่องมือในการประกอบการตัดสินใจเท่านั้น)
+**KYPST Investment Recommendation Chatbot** is chatbot project which is developed for learning how to develop and integrate Line Application with DialogFlow and Google Cloud Platform (Google Cloud Function and SQL), using mainly Python. This chatbot will recommend which types of investments are suitable for users by doing an assessment function. Note that, all of investments are risky, so investors should carefully study the information before making a decision to invest.
 
-Project นี้เป็นส่วนหนึ่งของวิชา Software Engineering (รหัสวิชา 2603483)
-
-## สมาชิกในกลุ่ม
-
-| รหัสนิสิต | ชื่อ | 
-| ------------ | ------------ |
-| 6142028326 | นางสาว ณัฐกานต์ เปลี่ยนจันทร์ |
-| 6142066126 | นาย ภาสกร ลิ่มชูเชื้อ |
-| 6142097626 | นาย หฤษฎ์ หมั้นทรัพย์    |
-
-## ช่องทางสำหรับ add friend
-
-<img src="imgreadme/kypst-qrcode.png" width="25%">
-
-เนื่องด้วยระบบ google cloud platform มีค่าใช้จ่ายในการดำเนินการ ดังนั้นถ้าต้องการทดสอบ chatbot ให้ติดต่อ developer เข้ามาก่อนเพื่อเปิดระบบให้ chatbot สามารถใช้งานได้
-
-## คู่มือในการใช้งาน Chatbot
-
-เมื่อผู้ใช้งาน (User) ทำการ add friend ตัว chatbot แล้ว ตัว Chatbot จะทักทาย User กลับ จากนั้น User จะสามารถเลือกใช้งานฟังก์ชันบนแถบ rich menu ได้ซึ่งมีด้วยกัน 3 ฟังก์ชัน ได้แก่ 
-
-1. แบบทดสอบประเมินความเสี่ยง 
-2. รับฟังข่าวสาร 
-3. คำถามที่พบบ่อย : FAQ
-
-**คู่มือการใช้งานแบบ Video : [Click Here](https://drive.google.com/file/d/1v51N-gZXBb68N_ez0y56s3dAdCwfWjQt/view)**
-
-<img src="imgreadme/line-introduce.jpg" width="45%">
+This project is part of Software Engineering course (ID : 2603483) 
 
 ---
 
-### 1.) แบบทดสอบประเมินความเสี่ยง
+### Channel for adding friend
 
-เมื่อ User กดเลือก **เมนูประเมินความเสี่ยง** (rich menu ด้านซ้าย) ตัว Chatbot จะส่งแบบประเมินให้ User ตอบคำถาม โดยมีคำถามทั้งหมด 8 ข้อ เมื่อ User ทำแบบประเมินเสร็จสิ้น ตัวระบบจะรายงาน และบันทึกว่า User เหมาะกับการลงทุนประเภทไหน ดังตัวอย่างในรูป
+<img src="imgreadme/kypst-qrcode.png" width="25%">
 
-เมื่อกดเลือกประเมินความเสี่ยง
+In some parts of project is developed on Google Cloud Platform (it has limited resources)
+So, please have to contact developer (me) to open the system before testing the chatbot.
+
+---
+
+### User Manual
+
+After users add our line chatbot, chatbot will greet them and suggest users to select the assessment function first. 
+
+<img src="imgreadme/line-introduce.jpg" width="45%">
+
+--- 
+
+**Function : Assessment**
+
+When users select this function, chatbot will send an assessment to users. The assessment has 8 questions which automately save your progress. After the assessment was done. Chatbot will report which types of investments are suitable for users.
+
+Users Select function.
 
 <img src="imgreadme/function-1-1.jpg" width="45%">
 
-เมื่อ User ทำแบบประเมินเสร็จสิ้น
+The assessment was done.
 
 <img src="imgreadme/function-1-2.jpg" width="45%">
 
 ---
 
-### 2.) รับฟังข่าวสาร 
-
-เมื่อ User กดเลือก **เมนูข่าวสาร** (rich menu ตรงกลาง) ตัว Chatbot จะส่งข่าวสารโดยแบ่งกรณีเป็น
-1. ถ้า User ยังไม่ได้ทำแบบประเมินความเสี่ยง ตัว Chatbot จะส่งข่าวสารทั้งหมดที่ Update ที่สุดให้กับ User 
-2. ถ้า User ทำแบบประเมินความเสี่ยงแล้ว ตัว Chatbot จะส่งข่าวสารเฉพาะการลงทุนที่เหมาะกับตัว User ที่ Update ที่สุดให้กับ User แทน แต่ทั้งนี้ User สามารถที่จะเลือกรับข่าวสารทั้งหมดได้เช่นกัน
-
-**!! สำหรับขั้นตอนนี้กำลังอยู่ระหว่างการพัฒนา โดยทางผู้พัฒนาจะใส่เป็น LinkDemo ข่าวสารแทนไว้ก่อน ดังตัวอย่างในรูป**
-
-โดยเมื่อกดเลือกข่าวสารจะ link User ไปยังเว็บไซต์หนึ่ง ๆ แทน
-
-<img src="imgreadme/function-2-demo.jpg" width="45%">
-
----
-
-### 3.) คำถามที่พบบ่อย : FAQ 
-
-เมื่อ User กดเลือก **เมนู FAQ** (rich menu ด้านขวา) ตัว Chatbot จะมีคำถามที่พบบ่อยให้ User เลือกเบื้องต้น ทั้งนี้ User สามารถพิมพ์คำถามเพื่อถามคำถามกับ chatbot ได้โดยตรงเช่นกัน 
-
-**!! สำหรับขั้นตอนนี้กำลังอยู่ระหว่างการพัฒนา โดยทางผู้พัฒนาจะใส่เป็น response รูปภาพแทนไว้ก่อน ดังตัวอย่างในรูป**
-
-เมื่อกดเลือกข่าวสาร User จะได้รับรูปภาพ FAQ แทน
-
-<img src="imgreadme/function-3-demo.jpg" width="45%">
+Note :
+1. For sequence diagram, please check Sequence-Diagram.md file 
+2. Other functions are under development.
