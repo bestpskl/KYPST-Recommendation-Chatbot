@@ -42,4 +42,4 @@ The assessment was done.
 Note :
 1. For sequence diagram, please check Sequence-Diagram.md file 
 2. Other functions are under development.
-3. Video Manual : [Click Here](https://drive.google.com/file/d/1v51N-gZXBb68N_ez0y56s3dAdCwfWjQt/view)**
+3. Video Manual : [Click Here](https://drive.google.com/file/d/1v51N-gZXBb68N_ez0y56s3dAdCwfWjQt/view)
